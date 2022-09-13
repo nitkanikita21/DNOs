@@ -1,8 +1,13 @@
 [package]
-name = "RustOS"
+name = "rust_os"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+bootloader = "0.9.8"
+volatile = "0.2.6"
+
+[package.metadata.bootimage]
+run-command = ["qemu-system-x86_64", "-drive", "format=raw,file={}", "-L", "D:\\Program Files\\qemu"]
