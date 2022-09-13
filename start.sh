@@ -1,0 +1,1 @@
+cargo xrun --target x86_64-rust_os.json -- -drive -L $QEMU
